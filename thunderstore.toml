@@ -1,0 +1,42 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "SGG_Modding"
+name = "DemonDaemon"
+versionNumber = "1.0.0"
+description = "Adapter to allow mods to be designed for both ReturnOfModding and ModImporter"
+websiteUrl = "https://github.com/SGG-Modding/DemonDaemon"
+containsNsfwContent = false
+
+[package.dependencies]
+Hell2Modding-Hell2Modding = "1.0.21"
+SGG_Modding-ENVY = "1.0.0"
+SGG_Modding-Chalk = "1.0.0"
+SGG_Modding-ReLoad = "1.0.0"
+SGG_Modding-SJSON = "1.0.0"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "./CHANGELOG.md"
+
+[[build.copy]]
+source = "./LICENSE"
+target = "./LICENSE"
+
+[[build.copy]]
+source = "./src"
+target = "./"
+
+
+[publish]
+repository = "https://thunderstore.io"
+communities = [ "hades-ii", ]
+
+[publish.categories]
+hades-ii = [ "libraries", "mods" ]
