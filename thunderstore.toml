@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "SGG_Modding"
 name = "DemonDaemon"
-versionNumber = "1.0.0"
+versionNumber = "1.0.1"
 description = "Adapter to allow mods to be designed for both ReturnOfModding and ModImporter"
 websiteUrl = "https://github.com/SGG-Modding/DemonDaemon"
 containsNsfwContent = false
