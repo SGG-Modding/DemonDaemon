@@ -43,7 +43,9 @@ local function script_import(env,stub)
 	end
 	if stub == config_lua then
 		local default = envy.import(env,stub,globals)
-		local config = chalk.config.save_if_new_else_load_and_merge(config_toml,default)
+		rom.path.create_directory(env._PLUGIN.config_mod_folder_path)
+		local toml = rom.path.combine(env._PLUGIN.config_mod_folder_path,config_toml)
+		local config = chalk.config.save_if_new_else_load_and_merge(toml,default)
 		env.config = config
 		if env.mod then
 			env.mod.Config = config

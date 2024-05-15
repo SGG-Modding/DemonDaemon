@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed config incorrectly being placed directly in the game directory instead of in the plugin's config
+
 ## [1.0.0] - 2024-05-15
 
 ### Added
