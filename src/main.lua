@@ -36,8 +36,14 @@ local command_import_post = start_pattern .. 'Import ' .. arg_pattern
 local command_sjson = start_pattern .. 'SJSON ' .. arg_pattern
 
 local function script_import(env,stub)
+	local globals = rom.game
+	local modutil = rom.mods['SGG_Modding-ModUtil']
+	if modutil then
+		globals = modutil.globals or globals
+	end
 	if stub == config_lua then
-		local config = chalk.update_lua_toml(env,config_lua,config_toml)
+		local default = envy.import(env,stub,globals)
+		local config = chalk.config.save_if_new_else_load_and_merge(config_toml,default)
 		env.config = config
 		if env.mod then
 			env.mod.Config = config
@@ -45,7 +51,7 @@ local function script_import(env,stub)
 		return config
 	end
 	if stub == register_lua then
-		local mod = envy.import(env,stub,rom.game) 
+		local mod = envy.import(env,stub,globals) 
 		env.mod = mod
 		mod.Plugin = env
 		return mod
