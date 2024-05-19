@@ -10,9 +10,9 @@ websiteUrl = "https://github.com/SGG-Modding/DemonDaemon"
 containsNsfwContent = false
 
 [package.dependencies]
-Hell2Modding-Hell2Modding = "1.0.22"
+Hell2Modding-Hell2Modding = "1.0.26"
 SGG_Modding-ENVY = "1.0.0"
-SGG_Modding-Chalk = "1.0.0"
+SGG_Modding-Chalk = "2.0.0"
 SGG_Modding-ReLoad = "1.0.1"
 SGG_Modding-SJSON = "1.0.0"
 

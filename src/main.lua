@@ -22,7 +22,6 @@ local modfile_name = 'modfile.txt'
 -- special names
 local register_lua = 'register.lua'
 local config_lua = 'config.lua'
-local config_toml = 'config.toml'
 
 local arg_pattern = '["%\']*([_%.%w\\/]+)["%\']*$'
 local arg_pattern_target_scripts = '["%\']*Scripts[\\/]([_%.%w\\/]+)["%\']*$'
@@ -42,10 +41,8 @@ local function script_import(env,stub)
 		globals = modutil.globals or globals
 	end
 	if stub == config_lua then
-		local default = envy.import(env,stub,globals)
-		rom.path.create_directory(env._PLUGIN.config_mod_folder_path)
-		local toml = rom.path.combine(env._PLUGIN.config_mod_folder_path,config_toml)
-		local config = chalk.config.save_if_new_else_load_and_merge(toml,default)
+		local path = rom.path.combine(rom.paths.config(),env._PLUGIN.guid .. '.cfg')
+		local config = chalk.load(path,envy.import(env,stub,globals))
 		env.config = config
 		if env.mod then
 			env.mod.Config = config
