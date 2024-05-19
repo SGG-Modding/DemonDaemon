@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-05-19
+
 ### Changed
+
 - Uses the new .cfg config system instead of the .toml config system
 
 ## [1.0.1] - 2024-05-15
@@ -22,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial Thunderstore release.
 
-[unreleased]: https://github.com/SGG-Modding/DemonDaemon/compare/1.0.1...HEAD
+[unreleased]: https://github.com/SGG-Modding/DemonDaemon/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/SGG-Modding/DemonDaemon/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/SGG-Modding/DemonDaemon/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/SGG-Modding/DemonDaemon/compare/8e5c63e18b6e26218aea36d9d28e7ec0dfa66025...1.0.0
